@@ -1,7 +1,7 @@
 #Author: Shankar
 Feature: Title of your feature
   I want to use this template for my feature file
-@test
+@test @test1
   Scenario Outline: TestCase-1 Verify Before TV Pop Up on Clicking BeforeTV Episode for Unsubscribed User
     Given Launch the App
     And Validate WelCome Screen
