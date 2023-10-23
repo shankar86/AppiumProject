@@ -1,0 +1,68 @@
+-------------------------------------------------------------------------------
+Test set: Parallel01IT
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 2, Skipped: 10, Time elapsed: 29.704 sec <<< FAILURE! - in Parallel01IT
+And Launch Browser and Authenticate the Device "swa10@yopmail.com" "123456"(| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |)  Time elapsed: 0.007 sec  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 85
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAXMI', ip: '192.168.1.105', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0116D383+3134339]
+	Ordinal0 [0x0105A171+2007409]
+	Ordinal0 [0x00EFAEE8+569064]
+	Ordinal0 [0x00E8139F+70559]
+	Ordinal0 [0x00E7CC63+52323]
+	Ordinal0 [0x00EA0DFC+200188]
+	Ordinal0 [0x00EA0C1D+199709]
+	Ordinal0 [0x00E9EB0B+191243]
+	Ordinal0 [0x00E82E77+77431]
+	Ordinal0 [0x00E83E3E+81470]
+	Ordinal0 [0x00E83DC9+81353]
+	Ordinal0 [0x01070CD9+2100441]
+	GetHandleVerifier [0x012DB75A+1396954]
+	GetHandleVerifier [0x012DB3D9+1396057]
+	GetHandleVerifier [0x012E7126+1444518]
+	GetHandleVerifier [0x012DBCE8+1398376]
+	Ordinal0 [0x01067F51+2064209]
+	Ordinal0 [0x010722EB+2106091]
+	Ordinal0 [0x01072411+2106385]
+	Ordinal0 [0x010849C4+2181572]
+	BaseThreadInitThunk [0x76627BA9+25]
+	RtlInitializeExceptionChain [0x774CBD3B+107]
+	RtlClearBits [0x774CBCBF+191]
+
+
+| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |  Time elapsed: 0.008 sec  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 85
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAXMI', ip: '192.168.1.105', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0116D383+3134339]
+	Ordinal0 [0x0105A171+2007409]
+	Ordinal0 [0x00EFAEE8+569064]
+	Ordinal0 [0x00E8139F+70559]
+	Ordinal0 [0x00E7CC63+52323]
+	Ordinal0 [0x00EA0DFC+200188]
+	Ordinal0 [0x00EA0C1D+199709]
+	Ordinal0 [0x00E9EB0B+191243]
+	Ordinal0 [0x00E82E77+77431]
+	Ordinal0 [0x00E83E3E+81470]
+	Ordinal0 [0x00E83DC9+81353]
+	Ordinal0 [0x01070CD9+2100441]
+	GetHandleVerifier [0x012DB75A+1396954]
+	GetHandleVerifier [0x012DB3D9+1396057]
+	GetHandleVerifier [0x012E7126+1444518]
+	GetHandleVerifier [0x012DBCE8+1398376]
+	Ordinal0 [0x01067F51+2064209]
+	Ordinal0 [0x010722EB+2106091]
+	Ordinal0 [0x01072411+2106385]
+	Ordinal0 [0x010849C4+2181572]
+	BaseThreadInitThunk [0x76627BA9+25]
+	RtlInitializeExceptionChain [0x774CBD3B+107]
+	RtlClearBits [0x774CBCBF+191]
+
+

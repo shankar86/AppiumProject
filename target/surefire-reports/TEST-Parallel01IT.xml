@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Parallel01IT" time="29.704" tests="16" errors="2" skipped="10" failures="0">
+  <properties>
+    <property name="jansi.mode" value="force"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.8+9-LTS-211"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\AutomationProject"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\AutomationProject"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="17.0.8+9-LTS-211"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\mahal\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="classworlds.conf" value="E:\Rijksmuseum\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8269271770736675554.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-17/bin/server;C:/Program Files/Java/jdk-17/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-17\bin\;C:\Users\mahal\AppData\Local\Android\Sdk\build-tools;C:\Users\mahal\AppData\Local\Android\Sdk\platform-tools;C:\Users\mahal\AppData\Local\Android\Sdk\tools;C:\Users\mahal\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\curl-7.71.1-win64-mingw\bin;C:\Program Files\CMake\bin;C:\Program Files\PowerShell\7\;C:\ProgramData\chocolatey\bin;C:\tools\opencv\build\x64\vc15\bin;C:\tools\opencv\sources\include\opencv2\;C:\tools\opencv\build\x64\vc15\lib;C:\tools\opencv\build\x64\vc14\lib;C:\Program Files\Git\cmd;C:\tools\opencv\build\x64\vc15\bin;C:\tools\opencv\build\x64\vc14\bin;C:\Program Files\nodejs\;C:\apache-maven-3.9.5\bin\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\mahal\anaconda3;C:\Users\mahal\anaconda3\Library\mingw-w64\bin;C:\Users\mahal\anaconda3\Library\usr\bin;C:\Users\mahal\anaconda3\Library\bin;C:\Users\mahal\anaconda3\Scripts;C:\Users\mahal\AppData\Local\Microsoft\WindowsApps;C:\tools\opencv\build\include\opencv2\;C:\tools\opencv\build\x64\vc15\lib\;C:\Users\mahal\AppData\Roaming\npm;C:\Program Files\JetBrains\PyCharm Community Edition 2022.2.1\bin;;C:\Users\mahal\AppData\Local\Microsoft\WindowsApps;C:\Users\mahal\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\PyCharm 2022.1\bin;;C:\Program Files\Python310\;C:\Program Files\Python310\Scripts\;;C:\Users\mahal\OneDrive\Desktop;;."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="platformName" value="AndroidTV"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\mahal"/>
+    <property name="tags" value="@test"/>
+    <property name="user.timezone" value="Europe/Amsterdam"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="mahal"/>
+    <property name="java.class.path" value="C:\Users\mahal\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.400.20230826-0755\jars\plexus-classworlds-2.7.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always clean install -DplatformName=AndroidTV -Dtags=@test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\AutomationProject\EMBEDDED"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="m2e.build.project.data.socket.port" value="56063"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="Given Launch the App" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0.002"/>
+  <testcase name="And Validate WelCome Screen" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0"/>
+  <testcase name="When Click on Login button" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0"/>
+  <testcase name="And Validate Authentication Code" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0"/>
+  <testcase name="And Launch Browser and Authenticate the Device &quot;swa10@yopmail.com&quot; &quot;123456&quot;" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0.007">
+    <error message="session not created: This version of ChromeDriver only supports Chrome version 85&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;LAXMI&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: Backtrace:&#10;	Ordinal0 [0x0116D383+3134339]&#10;	Ordinal0 [0x0105A171+2007409]&#10;	Ordinal0 [0x00EFAEE8+569064]&#10;	Ordinal0 [0x00E8139F+70559]&#10;	Ordinal0 [0x00E7CC63+52323]&#10;	Ordinal0 [0x00EA0DFC+200188]&#10;	Ordinal0 [0x00EA0C1D+199709]&#10;	Ordinal0 [0x00E9EB0B+191243]&#10;	Ordinal0 [0x00E82E77+77431]&#10;	Ordinal0 [0x00E83E3E+81470]&#10;	Ordinal0 [0x00E83DC9+81353]&#10;	Ordinal0 [0x01070CD9+2100441]&#10;	GetHandleVerifier [0x012DB75A+1396954]&#10;	GetHandleVerifier [0x012DB3D9+1396057]&#10;	GetHandleVerifier [0x012E7126+1444518]&#10;	GetHandleVerifier [0x012DBCE8+1398376]&#10;	Ordinal0 [0x01067F51+2064209]&#10;	Ordinal0 [0x010722EB+2106091]&#10;	Ordinal0 [0x01072411+2106385]&#10;	Ordinal0 [0x010849C4+2181572]&#10;	BaseThreadInitThunk [0x76627BA9+25]&#10;	RtlInitializeExceptionChain [0x774CBD3B+107]&#10;	RtlClearBits [0x774CBCBF+191]&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 85
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAXMI', ip: '192.168.1.105', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0116D383+3134339]
+	Ordinal0 [0x0105A171+2007409]
+	Ordinal0 [0x00EFAEE8+569064]
+	Ordinal0 [0x00E8139F+70559]
+	Ordinal0 [0x00E7CC63+52323]
+	Ordinal0 [0x00EA0DFC+200188]
+	Ordinal0 [0x00EA0C1D+199709]
+	Ordinal0 [0x00E9EB0B+191243]
+	Ordinal0 [0x00E82E77+77431]
+	Ordinal0 [0x00E83E3E+81470]
+	Ordinal0 [0x00E83DC9+81353]
+	Ordinal0 [0x01070CD9+2100441]
+	GetHandleVerifier [0x012DB75A+1396954]
+	GetHandleVerifier [0x012DB3D9+1396057]
+	GetHandleVerifier [0x012E7126+1444518]
+	GetHandleVerifier [0x012DBCE8+1398376]
+	Ordinal0 [0x01067F51+2064209]
+	Ordinal0 [0x010722EB+2106091]
+	Ordinal0 [0x01072411+2106385]
+	Ordinal0 [0x010849C4+2181572]
+	BaseThreadInitThunk [0x76627BA9+25]
+	RtlInitializeExceptionChain [0x774CBD3B+107]
+	RtlClearBits [0x774CBCBF+191]
+
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 63351
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+]]></system-err>
+  </testcase>
+  <testcase name="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0.008">
+    <error message="session not created: This version of ChromeDriver only supports Chrome version 85&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;LAXMI&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: Backtrace:&#10;	Ordinal0 [0x0116D383+3134339]&#10;	Ordinal0 [0x0105A171+2007409]&#10;	Ordinal0 [0x00EFAEE8+569064]&#10;	Ordinal0 [0x00E8139F+70559]&#10;	Ordinal0 [0x00E7CC63+52323]&#10;	Ordinal0 [0x00EA0DFC+200188]&#10;	Ordinal0 [0x00EA0C1D+199709]&#10;	Ordinal0 [0x00E9EB0B+191243]&#10;	Ordinal0 [0x00E82E77+77431]&#10;	Ordinal0 [0x00E83E3E+81470]&#10;	Ordinal0 [0x00E83DC9+81353]&#10;	Ordinal0 [0x01070CD9+2100441]&#10;	GetHandleVerifier [0x012DB75A+1396954]&#10;	GetHandleVerifier [0x012DB3D9+1396057]&#10;	GetHandleVerifier [0x012E7126+1444518]&#10;	GetHandleVerifier [0x012DBCE8+1398376]&#10;	Ordinal0 [0x01067F51+2064209]&#10;	Ordinal0 [0x010722EB+2106091]&#10;	Ordinal0 [0x01072411+2106385]&#10;	Ordinal0 [0x010849C4+2181572]&#10;	BaseThreadInitThunk [0x76627BA9+25]&#10;	RtlInitializeExceptionChain [0x774CBD3B+107]&#10;	RtlClearBits [0x774CBCBF+191]&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 85
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAXMI', ip: '192.168.1.105', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0116D383+3134339]
+	Ordinal0 [0x0105A171+2007409]
+	Ordinal0 [0x00EFAEE8+569064]
+	Ordinal0 [0x00E8139F+70559]
+	Ordinal0 [0x00E7CC63+52323]
+	Ordinal0 [0x00EA0DFC+200188]
+	Ordinal0 [0x00EA0C1D+199709]
+	Ordinal0 [0x00E9EB0B+191243]
+	Ordinal0 [0x00E82E77+77431]
+	Ordinal0 [0x00E83E3E+81470]
+	Ordinal0 [0x00E83DC9+81353]
+	Ordinal0 [0x01070CD9+2100441]
+	GetHandleVerifier [0x012DB75A+1396954]
+	GetHandleVerifier [0x012DB3D9+1396057]
+	GetHandleVerifier [0x012E7126+1444518]
+	GetHandleVerifier [0x012DBCE8+1398376]
+	Ordinal0 [0x01067F51+2064209]
+	Ordinal0 [0x010722EB+2106091]
+	Ordinal0 [0x01072411+2106385]
+	Ordinal0 [0x010849C4+2181572]
+	BaseThreadInitThunk [0x76627BA9+25]
+	RtlInitializeExceptionChain [0x774CBD3B+107]
+	RtlClearBits [0x774CBCBF+191]
+
+</error>
+  </testcase>
+  <testcase name="And Click On Continue button" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then Validate Home Screen &quot;English&quot;" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Click On Search Screen" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Verify Search Screen" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Search &quot;jothe jotheyali&quot; Content for &quot;AndroidTV&quot;" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Verify Searched Content &quot;jothe jotheyali&quot;" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Click On Search Content" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Click on Before TV Content" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Verify Before TV Pop Up for &quot;UnSubscribed&quot;" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And Exit the App" classname="| swa10@yopmail.com | 123456 | jothe jotheyali | AndroidTV | UnSubscribed | English |" time="0">
+    <skipped/>
+  </testcase>
+</testsuite>

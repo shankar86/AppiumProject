@@ -1,0 +1,13 @@
+com\zee5\tata\cucumber\appium\stepdefs\MainPage.class
+com\zee5\tata\cucumber\appium\stepdefs\BaseStep.class
+com\zee5\tata\cucumber\appium\stepdefs\CucumberRunner.class
+Parallel01IT.class
+com\zee5\tata\cucumber\appium\stepdefs\Test.class
+com\zee5\tata\cucumber\appium\action\AppiumAction.class
+com\zee5\tata\cucumber\appium\action\SeleniumAction.class
+com\zee5\tata\cucumber\appium\stepdefs\ClientProvider.class
+com\zee5\tata\cucumber\appium\pages\Page.class
+com\zee5\tata\cucumber\appium\stepdefs\TestContext$1.class
+com\zee5\tata\cucumber\appium\action\AndroidAction.class
+com\zee5\tata\cucumber\appium\stepdefs\StepDefs.class
+com\zee5\tata\cucumber\appium\stepdefs\TestContext.class

@@ -1,0 +1,383 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.zee5.tata</groupId>
+	<artifactId>Zee5App</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+	</parent>
+	<properties>
+		<platformName>$(platformName)</platformName>
+		<Row>$(Row)</Row>
+		<deviceName>emulator-5554</deviceName>
+		<BROWSER_NAME>Android</BROWSER_NAME>
+		<VERSION>Q</VERSION>
+		<platformName>Android</platformName>
+		<seleniumHostName>localhost</seleniumHostName>
+		<seleniumPort>4445</seleniumPort>
+		<appiumHostName>127.0.0.1</appiumHostName>
+		<appiumPort>4723</appiumPort>
+		<appPackage>com.zee5.amazon</appPackage>
+		<splashActivity>com.zee5.player.activities.SplashActivity</splashActivity>
+		<appActivity>com.zee5.player.tv.PlaybackOverlayActivity</appActivity>
+		<cucumber.version>1.2.5</cucumber.version>
+		<selenium.version>3.141.59</selenium.version>
+		<log4j.configuration>log4j.properties</log4j.configuration>
+		<junit.version>4.11</junit.version>
+		<!-- EXecution class name -->
+		<tags>$(tags)</tags>
+		<surefire.fork.count>2</surefire.fork.count>
+		<!-- <include.runner>**/CucumberRunner.class</include.runner> -->
+		<!-- <surefire.fork.count>1</surefire.fork.count> -->
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- Maven compiler plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version><!--$NO-MVN-MAN-VER$-->
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<release>17</release>
+					<!-- <source>13</source> <target>13</target> -->
+				</configuration>
+			</plugin>
+			<!-- Maven Properties plugin which will write the properties in
+			${project.build.directory}/classes/framework.properties 
+				file -->
+			<plugin>
+				<groupId>org.kuali.maven.plugins</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>2.0.1</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>write-project-properties</goal>
+						</goals>
+						<configuration>
+							<includeStandardMavenProperties>true</includeStandardMavenProperties>
+							<outputFile>
+								${project.build.directory}/classes/framework.properties
+							</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.temyers</groupId>
+				<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+				<version>4.1.0</version>
+				<executions>
+					<execution>
+						<id>generateRunners</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>generateRunners</goal>
+						</goals>
+						<configuration>
+							<!-- Mandatory -->
+							<!-- comma separated list of package names to scan
+							for glue code -->
+							<glue>
+								<!--
+								<package>com.vodafone.idp.cucumber.api.stepdefs</package> -->
+								<package>
+								com.zee5.tata.cucumber.appium.stepdefs</package>
+								> </glue>
+							<!-- These are the default values -->
+							<!-- Where to output the generated tests -->
+							<outputDirectory>
+								${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
+							<!-- The diectory, which must be in the root of the
+							runtime classpath, 
+								containing your feature files. -->
+							<featuresDirectory>src/test/resources/</featuresDirectory>
+							<!-- Directory where the cucumber report files shall
+							be written -->
+							<cucumberOutputDir>target/cucumber-reports</cucumberOutputDir>
+							<!-- comma separated list of output formats. For
+							JUnit Rerun json,html,rerun 
+								are mandatory -->
+							<format>json,html,rerun</format>
+							<!-- CucumberOptions.strict property -->
+							<strict>false</strict>
+							<!-- CucumberOptions.monochrome property -->
+							<monochrome>false</monochrome>
+							<!-- The tags to run, maps to CucumberOptions.tags
+							property -->
+							<tags>
+								<tag>${tags}</tag>
+								<tag>~@Ignore</tag>
+							</tags>
+							<!-- If set to true, only feature files containing
+							the required tags 
+								shall be generated. -->
+							<!-- Excluded tags (~@notMe) are ignored. -->
+							<filterFeaturesByTags>false</filterFeaturesByTags>
+							<!-- Generate TestNG runners instead of JUnit ones. -->
+							<useTestNG>false</useTestNG>
+							<!-- The naming scheme to use for the generated test
+							classes. One 
+								of 'simple' or 'feature-title' -->
+							<namingScheme>simple</namingScheme>
+							<!-- The class naming pattern to use. Only
+							required/used if naming 
+								scheme is 'pattern'. -->
+							<namingPattern>Parallel{c}IT</namingPattern>
+							<!-- One of [SCENARIO, FEATURE]. SCENARIO generates
+							one runner per 
+								scenario. FEATURE generates a runner per feature. -->
+							<parallelScheme>FEATURE</parallelScheme>
+							<!-- Generate JUnitReRun runners instead of JUnit
+							and TestNG single 
+								runner. -->
+							<!-- <useJUnitReRun>true</useJUnitReRun> -->
+							<!-- It is meaningless to keep reruning without
+							looking for root cause 
+								of the failure. Test case/features/scenarios won't pass magically so you 
+								can use max 5 rerun. -->
+							<retryCount></retryCount>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19</version>
+				<configuration>
+					<additionalClasspathElements>
+						<additionalClasspathElement>resources</additionalClasspathElement>
+					</additionalClasspathElements>
+					<forkCount>${surefire.fork.count}</forkCount>
+					<reuseForks>false</reuseForks>
+					<includes>
+						<include>**/*IT.class</include>
+					</includes>
+					<testFailureIgnore>true</testFailureIgnore>
+					<argLine>
+						--add-opens=java.base/java.lang=ALL-UNNAMED
+						--add-opens=java.base/java.util=ALL-UNNAMED
+						--add-opens=java.base/java.net=ALL-UNNAMED
+						--add-opens=java.base/java.util.regex=ALL-UNNAMED
+						--add-opens=java.base/sun.net.spi=ALL-UNNAMED
+						--add-opens=java.base/java.io=ALL-UNNAMED
+						--add-opens java.base/java.lang.reflect=ALL-UNNAMED
+						--add-opens java.base/java.text=ALL-UNNAMED
+						--add-opens java.desktop/java.awt.font=ALL-UNNAMED
+					</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>Zee5App</projectName>
+							<outputDirectory>
+								${project.build.directory}/Zee5/cucumber-reports</outputDirectory>
+							<cucumberOutput>
+								${project.build.directory}/cucumber-reports/</cucumberOutput>
+							<skippedFails>false</skippedFails>
+							<enableFlashCharts>false</enableFlashCharts>
+							<buildNumber>42</buildNumber>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.kuali.maven.plugins
+										</groupId>
+										<artifactId>
+											properties-maven-plugin
+										</artifactId>
+										<versionRange>
+											[2.0.1,)
+										</versionRange>
+										<goals>
+											<goal>
+												write-project-properties
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.github.temyers
+										</groupId>
+										<artifactId>
+											cucumber-jvm-parallel-plugin
+										</artifactId>
+										<versionRange>
+											[2.2.0,)
+										</versionRange>
+										<goals>
+											<goal>generateRunners</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.25</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.github.temyers</groupId>
+			<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+			<version>2.2.0</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<!-- API, java.xml.bind module -->
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<!-- Runtime, com.sun.xml.bind module -->
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.19.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20200518</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+</project>
